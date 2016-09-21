@@ -1,0 +1,11 @@
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\bin\Debug\AboutYourSystem.exe.config
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\obj\Debug\AboutYourSystem.csprojResolveAssemblyReference.cache
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\obj\Debug\AboutYourSystem.MainForm.resources
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\obj\Debug\AboutYourSystem.Properties.Resources.resources
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\obj\Debug\AboutYourSystem.csproj.GenerateResource.Cache
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\bin\Debug\AboutYourSystem.exe
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\bin\Debug\AboutYourSystem.pdb
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\bin\Debug\AYS.BL.dll
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\bin\Debug\AYS.BL.pdb
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\obj\Debug\AboutYourSystem.exe
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AboutYourSystem\obj\Debug\AboutYourSystem.pdb

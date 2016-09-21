@@ -1,0 +1,5 @@
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AYS.BL\bin\Debug\AYS.BL.dll
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AYS.BL\bin\Debug\AYS.BL.pdb
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AYS.BL\obj\Debug\AYS.BL.csprojResolveAssemblyReference.cache
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AYS.BL\obj\Debug\AYS.BL.dll
+c:\users\mark\documents\visual studio 2015\Projects\AboutYourSystem\AYS.BL\obj\Debug\AYS.BL.pdb
