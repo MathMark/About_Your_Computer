@@ -48,15 +48,22 @@ namespace AYS.BL
                 View.VideoAdapter = "VideoProcessor: " + queryObj["VideoProcessor"];
             }
 
-            ManagementObjectSearcher searcher8 = new ManagementObjectSearcher
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher
                 ("root\\CIMV2", "SELECT * FROM Win32_Processor");
 
-            foreach (ManagementObject queryObj in searcher8.Get())
+            foreach (ManagementObject queryObj in searcher.Get())
             {
                 View.Processor = "Name: " + queryObj["Name"];
                 View.Processor = "NumberOfCores: "+queryObj["NumberOfCores"];
                 View.Processor = "ProcessorId: "+queryObj["ProcessorId"];
 
+            }
+            searcher = new ManagementObjectSearcher("root\\CIMV2", 
+    "SELECT * FROM Win32_PhysicalMemory");
+
+            foreach(ManagementObject queryObj in searcher.Get())
+            {
+                View.RAM = "Bank Label: " +queryObj["BankLabel"]+" Capacity: " + (Convert.ToInt64(queryObj["Capacity"])/1024/1024/1024)+" GB";
             }
         }
     }

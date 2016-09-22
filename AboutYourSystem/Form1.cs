@@ -22,6 +22,7 @@ namespace AboutYourSystem
             InfoList.Nodes.Add("Drives");
             InfoList.Nodes.Add("Video Adapter");
             InfoList.Nodes.Add("Processor");
+            InfoList.Nodes.Add("RAM");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -63,6 +64,13 @@ namespace AboutYourSystem
             set
             {
                 InfoList.Nodes[3].Nodes.Add(value.ToString());
+            }
+        }
+        public string RAM
+        {
+            set
+            {
+                InfoList.Nodes[4].Nodes.Add(value.ToString());
             }
         }
         public event EventHandler FormLoad;

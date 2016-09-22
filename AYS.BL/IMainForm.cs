@@ -14,5 +14,6 @@ namespace AYS.BL
         string system {  set; }
         string drives { set; }
         string Processor { set; }
+        string RAM { set; }
     }
 }
