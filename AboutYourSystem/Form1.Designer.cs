@@ -50,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(653, 411);
             this.Controls.Add(this.InfoList);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "AYS";
             this.ResumeLayout(false);
 
         }

@@ -31,16 +31,28 @@ namespace AYS.BL
             View.system = "Count of Processors - " + Environment.ProcessorCount;
 
             DriveInfo[] drives = DriveInfo.GetDrives();
+            ManagementObjectSearcher searcher =new ManagementObjectSearcher("root\\CIMV2",
+    "SELECT * FROM Win32_DiskDrive");
+
+
+
+            foreach (ManagementObject queryObj in searcher.Get())
+            {
+                
+                View.drives="Disk Drive: "+queryObj["Model"]+"Size: "+
+                Math.Round(Convert.ToDouble(queryObj["Size"]) / 1024 / 1024 / 1024, 2)+" GB";
+
+            }
 
             for (int i = 0; i < drives.Length; i++)
             {
                 View.drives = drives[i].Name+" [Capacity: "+drives[i].TotalSize/1024/1024/1024+" GB; "+"Free Space: "+
                     drives[i].TotalFreeSpace/1024/1024/1024+" GB; "+"File System: "+drives[i].DriveFormat+"; Drive Type: "+drives[i].DriveType+"]";
             }
-            ManagementObjectSearcher searcher11 = new ManagementObjectSearcher
+             searcher = new ManagementObjectSearcher
                 ("root\\CIMV2", "SELECT * FROM Win32_VideoController");
 
-            foreach (ManagementObject queryObj in searcher11.Get())
+            foreach (ManagementObject queryObj in searcher.Get())
             {
                 View.VideoAdapter = "AdapterRAM: " + queryObj["AdapterRAM"];
                 View.VideoAdapter = "Caption: " + queryObj["Caption"];
@@ -48,7 +60,7 @@ namespace AYS.BL
                 View.VideoAdapter = "VideoProcessor: " + queryObj["VideoProcessor"];
             }
 
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher
+            searcher = new ManagementObjectSearcher
                 ("root\\CIMV2", "SELECT * FROM Win32_Processor");
 
             foreach (ManagementObject queryObj in searcher.Get())
@@ -56,6 +68,8 @@ namespace AYS.BL
                 View.Processor = "Name: " + queryObj["Name"];
                 View.Processor = "NumberOfCores: "+queryObj["NumberOfCores"];
                 View.Processor = "ProcessorId: "+queryObj["ProcessorId"];
+                View.Processor = "Maximum Clock Speed: " + queryObj["MaxClockSpeed"]+" MHz";
+                View.Processor = "Description: " + queryObj["Description"];
 
             }
             searcher = new ManagementObjectSearcher("root\\CIMV2", 
@@ -64,6 +78,15 @@ namespace AYS.BL
             foreach(ManagementObject queryObj in searcher.Get())
             {
                 View.RAM = "Bank Label: " +queryObj["BankLabel"]+" Capacity: " + (Convert.ToInt64(queryObj["Capacity"])/1024/1024/1024)+" GB";
+            }
+
+            searcher =
+            new ManagementObjectSearcher(
+                "SELECT * FROM Win32_DesktopMonitor");
+
+            foreach (ManagementObject service in searcher.Get())
+            {
+                View.RAM=""+service["Description"];
             }
         }
     }
