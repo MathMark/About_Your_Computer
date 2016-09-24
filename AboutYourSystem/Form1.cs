@@ -24,6 +24,8 @@ namespace AboutYourSystem
             InfoList.Nodes.Add("Video Adapter");
             InfoList.Nodes.Add("Processor");
             InfoList.Nodes.Add("RAM");
+            InfoList.Nodes.Add("Network Adapters ");
+            InfoList.Nodes.Add("Monitor");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -72,6 +74,20 @@ namespace AboutYourSystem
             set
             {
                 InfoList.Nodes[4].Nodes.Add(value.ToString());
+            }
+        }
+        public string NetworkAdapter
+        {
+            set
+            {
+                InfoList.Nodes[5].Nodes.Add(value.ToString());
+            }
+        }
+        public string Monitor
+        {
+            set
+            {
+                InfoList.Nodes[6].Nodes.Add(value.ToString());
             }
         }
         public event EventHandler FormLoad;

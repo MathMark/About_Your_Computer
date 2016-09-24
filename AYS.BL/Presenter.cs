@@ -88,6 +88,24 @@ namespace AYS.BL
             {
                 View.RAM=""+service["Description"];
             }
+            searcher =
+           new ManagementObjectSearcher(
+               "SELECT * FROM Win32_NetworkAdapter");
+
+            foreach(ManagementObject servise in searcher.Get())
+            {
+                View.NetworkAdapter = "Name: " + servise["Name"]+" "+
+                    servise["AdapterType"];
+            }
+
+            searcher =
+          new ManagementObjectSearcher(
+              "SELECT * FROM Win32_DesktopMonitor");
+
+            foreach (ManagementObject servise in searcher.Get())
+            {
+                View.Monitor = "Screen Width: "+servise["ScreenWidth"]+"; "+"Screen Height: " + servise["ScreenHeight"];
+            }
         }
     }
 }
